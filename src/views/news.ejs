@@ -6,8 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Node.js News</h1>
+  <header class="header">
+    <div class="header__logo">Node.JS news</div>
+    <div class="header__search">Search</div>
+  </header>
+
+  <dic class="wrapper">
+    <div class="news">
+      <% articl.forEach(function(articl,index){ %>
+        <a href="#" class="news__card">
+          <h2><%- articl.title.rendered%></h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae alias, nobis iste inventore tenetur maiores? Id quos ex provident iste? Odio cumque dicta itaque nostrum assumenda perspiciatis a iste!</p>
+        </a>
+      <% }) %> 
+    </div> 
+  </dic>
 </body>
 </html>

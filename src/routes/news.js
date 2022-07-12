@@ -3,11 +3,10 @@ const newRouter=express.Router()
 const axios=require('axios')
 
 newRouter.route('/').get(async(req,res)=>{
-  // res.render('news')
-
   try {
     const newsApi=await axios.get('https://raddy.dev/wp-json/wp/v2/posts/')
-    console.log(newsApi.data)
+   
+    res.render('news',{articl:newsApi.data})
   } catch (error) {
     if(error.response){
       console.log(error.response.data)
@@ -18,7 +17,6 @@ newRouter.route('/').get(async(req,res)=>{
     } else{
       console.log('Error',error.message)
     }
-    
   }
 })
 

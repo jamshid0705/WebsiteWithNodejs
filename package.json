@@ -128,8 +128,7 @@
     "whatwg-url": "^11.0.0"
   },
   "scripts": {
-    "start": "nodemon app.js",
-    "compile": "node-sass public/css/styles.scss public/css/styles.css --watch"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
